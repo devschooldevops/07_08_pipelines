@@ -42,6 +42,8 @@ stages:
 # Defining our first stage for building the application
 - stage: build_website_app
   displayName: 'Build Website application'
+  pool:
+    name: Default
 
 # Jobs keyword, signaling definition of one or multiple jobs in the 'build_website_app' stage
   jobs: 
@@ -79,12 +81,12 @@ Insert the following code lines below the `steps` keyword, while paying attentio
       displayName: 'Install npm dependencies'
       inputs:
         command: 'install'
-        workingDir: $(Pipeline.Workspace)/s/jsnoise-web-azdo
+        workingDir: jsnoise-web-azdo
 
     
     # Build our website application
     - bash: |
-        cd $(Pipeline.Workspace)/s/jsnoise-web-azdo
+        cd jsnoise-web-azdo
         npm run build
       displayName: 'Run build for website app'
 
@@ -92,7 +94,7 @@ Insert the following code lines below the `steps` keyword, while paying attentio
     # This artifact is needed so we can later deploy the application to Azure
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(Pipeline.Workspace)/s/jsnoise-web-azdo/dist'
+        targetPath: 'jsnoise-web-azdo/dist'
         artifact: 'website'
         publishLocation: 'pipeline'
 ```
@@ -113,6 +115,8 @@ We now have a complete build pipeline for our application!
 - stage: deploy_website_app
   displayName: 'Deploy Website application'
   dependsOn: build_website_app
+  pool:
+    name: Default
 
 # Jobs keyword, signaling definition of one or multiple jobs in the 'deploy_website_app' stage
   jobs: 
@@ -137,12 +141,12 @@ We now have a complete build pipeline for our application!
       inputs:
         buildType: 'current'
         artifactName: 'website'
-        targetPath: '$(Pipeline.Workspace)/s/website'
+        targetPath: 'website'
     
     # This script will run an az cli command to deploy our website to an Azure storage account
     - script: |
        az config set extension.use_dynamic_install=yes_without_prompt
-       cd $(Pipeline.Workspace)/s
+       
        az storage blob directory upload -c '$web' --account-name ${{ parameters.accountName }} -s "website/*" -d . --recursive --account-key ${{ parameters.accountKey }}
       displayName: 'Deploy app to storage account'
 ```
