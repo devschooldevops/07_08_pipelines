@@ -14,7 +14,7 @@ This repository is used for one of the lessons of the devops devschool
 
 3. Create classic Release pipeline [Open Workshop](workshops/3.classic_pipeline_release.md)
 
-4. Create build + deploy pipeline as code [Open WOrkshop](workshops/pipeline_as_code_build_deploy.md)
+4. Create build + deploy pipeline as code [Open Workshop](workshops/pipeline_as_code_build_deploy.md)
 
 5. Create local ubuntu agent and link to AZDO [Open Workshop](workshops/4.local_agent_ubuntu.md)
     - [prerequisites gist](https://gist.github.com/imhotepper/f4d89ff9f40d6901926baa151c9f7367)
