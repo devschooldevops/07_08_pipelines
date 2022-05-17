@@ -1,0 +1,266 @@
+{
+    "options": [
+        {
+            "enabled": false,
+            "definition": {
+                "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+            },
+            "inputs": {
+                "branchFilters": "[\"+refs/heads/*\"]",
+                "additionalFields": "{}"
+            }
+        },
+        {
+            "enabled": false,
+            "definition": {
+                "id": "a9db38f9-9fdc-478c-b0f9-464221e58316"
+            },
+            "inputs": {
+                "workItemType": "Issue",
+                "assignToRequestor": "true",
+                "additionalFields": "{}"
+            }
+        }
+    ],
+    "variables": {
+        "system.debug": {
+            "value": "false",
+            "allowOverride": true
+        }
+    },
+    "properties": {},
+    "tags": [],
+    "_links": {
+        "self": {
+            "href": "https://dev.azure.com/devschool2022/aac7244c-4545-4ac9-b0d9-e78a4e7503f2/_apis/build/Definitions/5?revision=13"
+        },
+        "web": {
+            "href": "https://dev.azure.com/devschool2022/aac7244c-4545-4ac9-b0d9-e78a4e7503f2/_build/definition?definitionId=5"
+        },
+        "editor": {
+            "href": "https://dev.azure.com/devschool2022/aac7244c-4545-4ac9-b0d9-e78a4e7503f2/_build/designer?id=5&_a=edit-build-definition"
+        },
+        "badge": {
+            "href": "https://dev.azure.com/devschool2022/aac7244c-4545-4ac9-b0d9-e78a4e7503f2/_apis/build/status/5"
+        }
+    },
+    "jobAuthorizationScope": 1,
+    "jobTimeoutInMinutes": 60,
+    "jobCancelTimeoutInMinutes": 5,
+    "process": {
+        "phases": [
+            {
+                "steps": [
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "Use Node 14.x",
+                        "timeoutInMinutes": 0,
+                        "retryCountOnTaskFailure": 0,
+                        "condition": "succeeded()",
+                        "task": {
+                            "id": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2",
+                            "versionSpec": "0.*",
+                            "definitionType": "task"
+                        },
+                        "inputs": {
+                            "versionSpec": "14.x",
+                            "checkLatest": "false",
+                            "force32bit": "false"
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "npm install",
+                        "timeoutInMinutes": 0,
+                        "retryCountOnTaskFailure": 0,
+                        "condition": "succeeded()",
+                        "task": {
+                            "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+                            "versionSpec": "1.*",
+                            "definitionType": "task"
+                        },
+                        "inputs": {
+                            "command": "install",
+                            "workingDir": "",
+                            "verbose": "false",
+                            "customCommand": "",
+                            "customRegistry": "useNpmrc",
+                            "customFeed": "",
+                            "customEndpoint": "",
+                            "publishRegistry": "useExternalRegistry",
+                            "publishFeed": "",
+                            "publishPackageMetadata": "true",
+                            "publishEndpoint": ""
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "npm build",
+                        "timeoutInMinutes": 0,
+                        "retryCountOnTaskFailure": 0,
+                        "condition": "succeeded()",
+                        "task": {
+                            "id": "d9bafed4-0b18-4f58-968d-86655b4d2ce9",
+                            "versionSpec": "2.*",
+                            "definitionType": "task"
+                        },
+                        "inputs": {
+                            "script": "npm run build",
+                            "workingDirectory": "",
+                            "failOnStderr": "false"
+                        }
+                    },
+                    {
+                        "environment": {},
+                        "enabled": true,
+                        "continueOnError": false,
+                        "alwaysRun": false,
+                        "displayName": "Publish Pipeline Artifact",
+                        "timeoutInMinutes": 0,
+                        "retryCountOnTaskFailure": 0,
+                        "condition": "succeeded()",
+                        "task": {
+                            "id": "ecdc45f6-832d-4ad9-b52b-ee49e94659be",
+                            "versionSpec": "1.*",
+                            "definitionType": "task"
+                        },
+                        "inputs": {
+                            "path": "dist",
+                            "artifactName": "website",
+                            "artifactType": "pipeline",
+                            "fileSharePath": "",
+                            "parallel": "false",
+                            "parallelCount": "8",
+                            "properties": ""
+                        }
+                    }
+                ],
+                "name": "Agent job 1",
+                "refName": "Job_1",
+                "condition": "succeeded()",
+                "target": {
+                    "queue": {
+                        "_links": {
+                            "self": {
+                                "href": "https://dev.azure.com/devschool2022/_apis/build/Queues/1"
+                            }
+                        },
+                        "id": 1,
+                        "url": "https://dev.azure.com/devschool2022/_apis/build/Queues/1",
+                        "pool": null
+                    },
+                    "executionOptions": {
+                        "type": 0
+                    },
+                    "allowScriptsAuthAccessOption": false,
+                    "type": 1
+                },
+                "jobAuthorizationScope": 1
+            }
+        ],
+        "target": {
+            "agentSpecification": {
+                "identifier": "windows-2019"
+            }
+        },
+        "type": 1
+    },
+    "repository": {
+        "properties": {
+            "apiUrl": "https://api.github.com/repos/imhotepper/jsnoise-web",
+            "branchesUrl": "https://api.github.com/repos/imhotepper/jsnoise-web/branches",
+            "cloneUrl": "https://github.com/imhotepper/jsnoise-web.git",
+            "connectedServiceId": "13590e4d-8bd4-46df-bae1-7c4b36219f96",
+            "defaultBranch": "master",
+            "fullName": "imhotepper/jsnoise-web",
+            "hasAdminPermissions": "False",
+            "isFork": "False",
+            "isPrivate": "False",
+            "lastUpdated": "04/04/2022 17:35:59",
+            "manageUrl": "https://github.com/imhotepper/jsnoise-web",
+            "nodeId": "MDEwOlJlcG9zaXRvcnkxNjU0MjEzNjY=",
+            "ownerId": "176727",
+            "orgName": "imhotepper",
+            "refsUrl": "https://api.github.com/repos/imhotepper/jsnoise-web/git/refs",
+            "safeRepository": "imhotepper/jsnoise-web",
+            "shortName": "jsnoise-web",
+            "ownerAvatarUrl": "https://avatars.githubusercontent.com/u/176727?v=4",
+            "archived": "False",
+            "externalId": "165421366",
+            "ownerIsAUser": "True",
+            "checkoutNestedSubmodules": "false",
+            "cleanOptions": "0",
+            "fetchDepth": "0",
+            "gitLfsSupport": "false",
+            "reportBuildStatus": "true",
+            "skipSyncSource": "false",
+            "labelSourcesFormat": "$(build.buildNumber)",
+            "labelSources": "0"
+        },
+        "id": "imhotepper/jsnoise-web",
+        "type": "GitHub",
+        "name": "imhotepper/jsnoise-web",
+        "url": "https://github.com/imhotepper/jsnoise-web.git",
+        "defaultBranch": "refs/heads/master",
+        "clean": "true",
+        "checkoutSubmodules": false
+    },
+    "processParameters": {},
+    "quality": 1,
+    "authoredBy": {
+        "displayName": "Dragos",
+        "url": "https://spsprodweu5.vssps.visualstudio.com/A614e297a-ce1a-4d8f-8f56-8ebee4a79a00/_apis/Identities/e591a5a1-77c3-4d04-aa8c-926c992c3a10",
+        "_links": {
+            "avatar": {
+                "href": "https://dev.azure.com/devschool2022/_apis/GraphProfile/MemberAvatars/msa.MWY2Njc0Y2ItN2E1ZS03YzU3LWIxMjMtOWVlYjczZDI3NTEx"
+            }
+        },
+        "id": "e591a5a1-77c3-4d04-aa8c-926c992c3a10",
+        "uniqueName": "imhotepp@outlook.com",
+        "imageUrl": "https://dev.azure.com/devschool2022/_apis/GraphProfile/MemberAvatars/msa.MWY2Njc0Y2ItN2E1ZS03YzU3LWIxMjMtOWVlYjczZDI3NTEx",
+        "descriptor": "msa.MWY2Njc0Y2ItN2E1ZS03YzU3LWIxMjMtOWVlYjczZDI3NTEx"
+    },
+    "drafts": [],
+    "queue": {
+        "_links": {
+            "self": {
+                "href": "https://dev.azure.com/devschool2022/_apis/build/Queues/9"
+            }
+        },
+        "id": 9,
+        "name": "Azure Pipelines",
+        "url": "https://dev.azure.com/devschool2022/_apis/build/Queues/9",
+        "pool": {
+            "id": 9,
+            "name": "Azure Pipelines",
+            "isHosted": true
+        }
+    },
+    "id": 5,
+    "name": "Website build pipeline",
+    "url": "https://dev.azure.com/devschool2022/aac7244c-4545-4ac9-b0d9-e78a4e7503f2/_apis/build/Definitions/5?revision=13",
+    "uri": "vstfs:///Build/Definition/5",
+    "path": "\\",
+    "type": 2,
+    "queueStatus": 0,
+    "revision": 13,
+    "createdDate": "2022-04-29T14:36:48.907Z",
+    "project": {
+        "id": "aac7244c-4545-4ac9-b0d9-e78a4e7503f2",
+        "name": "playground",
+        "url": "https://dev.azure.com/devschool2022/_apis/projects/aac7244c-4545-4ac9-b0d9-e78a4e7503f2",
+        "state": 1,
+        "revision": 11,
+        "visibility": 0,
+        "lastUpdateTime": "2022-04-04T17:34:17.393Z"
+    }
+}
