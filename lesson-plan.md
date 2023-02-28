@@ -2,19 +2,19 @@
 
 ## General information
 
-**Duration**: 3 hours (max 1 hour theory)
+**Duration**: 3 hours (1h theory, 2h practic)
 
-**Primary teacher**: <>
+**Primary teacher**: 
 
-**Secondary teacher**: <>
+**Secondary teacher**: 
 
 ## Goal
-At the end of the lesson the student should
-- know what cicd is and why it is useful
-- be able to make a pipeline in azure devops
-- understand the difference between stages/jobs/tasks in pipelines 
-- have a basic understand of an "agent"
-- know about other cicd tools like gitlab runners, github actions, travis etc
+At the end of the lesson, the students should:
+- know what CI/CD is and why it is useful
+- be able to create a pipeline in Azure DevOps
+- understand the difference between stages/jobs/tasks in Azure DevOps pipelines
+- have an understand of an "agent"
+- know about other CI/CD tools like GitLab runners, GitHub actions, Travis etc.
 
 ## Resources required/used
 - Azure DevOps
