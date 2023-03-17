@@ -2,7 +2,7 @@
 
 ## General information
 
-**Duration**: 3 hours (1h theory, 2h practic)
+**Duration**: 6 hours (2h theory, 4h practic)
 
 **The teacher**: Stefan Plesca
 
@@ -16,6 +16,7 @@ At the end of the lesson, the students should:
 - understand the difference between stages/jobs/tasks in Azure DevOps pipelines
 - understand the importance and usability of CiCd code (templating)
 - conditions & logic in Azure DevOps pipelines
+- resources and good use of them
 - good practice and security focus
 
 ## Resources required/used
@@ -41,15 +42,15 @@ Day 1:
 
 Day 2:
 - 10 min: introduction and reminder for last day
-- 40 min: Templating / nested templating and conditionals
+- 40 min: Templating / nested templating, conditionals and resources
 - 10 min: Break
 - 15 min: Exercise 1: (templates)
 - 15 min: Exercise 2: (simple conditions 1 - variables)
 - 15 min: Exercise 3: (simple conditions 2 - parameters)
 - 15 min: Break
 - 15 min: Exercise 4: (conditions complex)
-- 20 min: Exercise 5: (full pipeline exercise)
-- 25 min: Wrap up, summary and Q&A
+- 30 min: Exercise 5: (full pipeline exercise)
+- 15 min: Wrap up, summary and Q&A
 
 ## Feedback from students
 (generic survey will be setup)

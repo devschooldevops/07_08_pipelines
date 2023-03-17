@@ -1,0 +1,54 @@
+name: "Find the bugs - check YAML"
+
+trigger: 
+
+parameters:
+  - name: StringParameter
+    displayName: A string input
+    type: string
+    default: 'something'
+- name: ObjectParameter
+    displayName: An object input
+    type: object
+    default: 
+        - d
+        - t
+         - c   
+
+variables:
+var1: "something"
+  var2: "somethingNew"
+
+stages:
+- stage: dev
+  displayName: 'Dev'
+
+  jobs:
+  - job: Dev_work
+    pool
+      name: 'ubuntu-latest'
+    steps:
+
+- task: Bash@3
+      name: CheckVars 
+      displayName: 'Check vars' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "Checking our variables"
+
+    - task: Bash@3
+      name: LookAtTheStars 
+      displayName: 'Check sky' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "Checking the sky"
+
+- task: Bash@3
+      name: BeingAwesome 
+      displayName: 'Awesome check' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "You are awesome!"
