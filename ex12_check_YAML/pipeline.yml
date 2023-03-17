@@ -26,7 +26,7 @@ stages:
   jobs:
   - job: Dev_work
     pool
-      name: 'ubuntu-latest'
+      name: 'Linux'
     steps:
 
 - task: Bash@3

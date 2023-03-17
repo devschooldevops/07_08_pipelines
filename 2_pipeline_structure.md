@@ -4,6 +4,8 @@
 
     trigger:
 
+    schedules: 
+
     resources:
 
     parameters:

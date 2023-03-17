@@ -44,6 +44,8 @@ Fpr example his are common by default pools that you can use right away:
 * ubuntu-latest
 * macOS-latest
 
+Agents can be Microsoft agents or Self-Hosted. The Microsoft agents are maintained by Microsoft and Self-Hosted are agents you create.
+
 ## Agent capabilities
 What exactly can the agent do. You can update agents or manage their capabilities.
 
@@ -51,7 +53,9 @@ What exactly can the agent do. You can update agents or manage their capabilitie
 
     name: (optional - if you do not assign a value, it will be named by the system)
 
-    trigger: (required)
+    trigger: (optional)
+
+    schedules: (optional)
 
     resources: (optional)
 

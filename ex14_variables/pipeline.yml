@@ -1,0 +1,73 @@
+name: 'Play-With-Me-$(Build.SourceBranchName)-$(Date:dd-MM-yyyy)'
+
+parameters:
+  - name: Name
+    displayName: What is your name?
+    type: string
+    default: 'NoName'
+    
+variables:
+  StageName: '$(System.StageName)'
+  WorkDir: '$(System.DefaultWorkingDirectory)'
+  A_Var: 'Be Happy!'
+
+stages:
+- stage: dev
+  displayName: 'Dev'
+
+  jobs:
+  - job: Dev_work
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+
+    - task: Bash@3
+      name: CheckVars 
+      displayName: 'Check vars' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "Checking our variables"
+            echo "$(StageName)"
+            echo "$(WorkDir)"
+            echo "$(A_Var)"
+
+- stage: test
+  displayName: 'Test'
+
+  jobs:
+  - job: Test_work
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+
+    - task: Bash@3
+      name: CheckVars 
+      displayName: 'Check vars' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "Checking our variables"
+            echo "$(StageName)"
+            echo "$(WorkDir)"
+            echo "$(A_Var)"
+
+- stage: prod
+  displayName: 'Prod'
+
+  jobs:
+  - job: Prod_work
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+
+    - task: Bash@3
+      name: CheckVars 
+      displayName: 'Check vars' 
+      inputs:
+        targetType: 'inline'
+        script: |
+            echo "Checking our variables"
+            echo "$(StageName)"
+            echo "$(WorkDir)"
+            echo "$(A_Var)"
