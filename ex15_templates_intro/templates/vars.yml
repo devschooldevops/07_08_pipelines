@@ -1,0 +1,8 @@
+variables:
+  var1: 'Value-1'
+  var2: 'Value-3' 
+  name: 'Mario'  
+  env: 'test'
+  isMaster: $[eq(variables['Build.SourceBranch'], 'refs/heads/master')]
+  isDevelop: $[eq(variables['Build.SourceBranch'], 'refs/heads/develop')]
+  image: 'ubuntu-latest'

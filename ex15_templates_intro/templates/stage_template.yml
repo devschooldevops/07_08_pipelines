@@ -1,0 +1,31 @@
+parameters:
+  - name: env
+    type: object
+    default:
+    - environment: 'dev'
+    - environment: 'test'
+    - environment: 'acc'
+    - environment: 'prod'
+  - name: var1
+  - name: var2
+  - name: nameIt
+
+stages:
+- ${{ each ev in parameters.env }}:
+  - stage: ${{ ev.environment }}
+    displayName: "${{ ev.environment }}"
+
+    jobs:
+    - job: "${{ ev.environment }}_work"
+      pool:
+        vmImage: $(image)
+      steps:
+
+      - task: Bash@3
+        name: CheckParam 
+        displayName: 'Check parameters for ${{ ev.environment }}' 
+        inputs:
+          targetType: 'inline'
+          script: |
+              echo "My name is ${{ parameters.nameIt }}"
+              echo "This is a job running on ${{ ev.environment }} with ${{parameters.var1}} and ${{parameters.var2}}"

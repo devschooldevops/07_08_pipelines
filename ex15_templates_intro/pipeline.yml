@@ -1,0 +1,24 @@
+name: '$(Build.DefinitionName)-$(Build.SourceBranchName)-$(Date:dd-MM-yyyy)-$(Rev:r)'
+
+trigger: none
+
+parameters:
+  - name: Name
+    displayName: What is your name?
+    type: string
+    default: 'NoName'
+  - name: Var2
+    displayName: Give me something!
+    type: string
+    default: 'theValue'
+
+variables:
+- template: templates/vars.yml
+
+stages:
+- template: templates/stage_template.yml
+  parameters:
+    var1: $(var1)
+    var2: ${{ parameters.Var2 }}
+    nameIt: ${{ parameters.Name }}
+    env: $(env)
