@@ -2,7 +2,7 @@
 
 Parameters are user input values. Those influence your pipeline runs and behaviour.
 
-Parameters are defined within the "parameters:" directive and are used commonly as {{parameters.ParameterName}} 
+Parameters are defined within the "parameters:" directive and are used commonly as ${{parameters.ParameterName}} 
 
 > Parameters are only available at template parsing time. Parameters are expanded just before the pipeline runs so that values surrounded by ${{ }} are replaced with parameter values. 
 
