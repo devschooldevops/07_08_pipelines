@@ -2,6 +2,13 @@ name: '$(Build.DefinitionName)-$(Build.SourceBranchName)-$(Date:dd-MM-yyyy)-$(Re
 
 trigger: none
 
+resources:
+  repositories:
+    - repository: GenericTemplates
+      type: git
+      name: <OrganizationName>/Templates
+      ref: refs/heads/main
+
 parameters:
   - name: Name
     displayName: What is your name?
@@ -13,10 +20,10 @@ parameters:
     default: 'theValue'
 
 variables:
-- template: templates/vars.yml
+- template: vars/vars.yml@GenericTemplates
 
 stages:
-- template: templates/stage_template.yml
+- template: thetemplates/stage_template.yml@GenericTemplates
   parameters:
     var1: $(var1)
     var2: ${{ parameters.Var2 }}

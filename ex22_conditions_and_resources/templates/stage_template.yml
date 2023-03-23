@@ -4,8 +4,6 @@ parameters:
     default:
     - environment: 'dev'
     - environment: 'test'
-    - environment: 'acc'
-    - environment: 'prod'
   - name: var1
   - name: var2
   - name: nameIt
@@ -16,7 +14,7 @@ stages:
     displayName: "${{ ev.environment }}"
 
     jobs:
-    - template: job_template.yml
+    - template: thetemplates/job_template.yml@GenericTemplates
       parameters:
         JobName: "${{ ev.environment }}_work"
         environment_job: "${{ ev.environment }}"

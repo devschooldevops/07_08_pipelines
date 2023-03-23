@@ -7,6 +7,6 @@ jobs:
   pool:
     vmImage: $(image)
   steps:
-    - template: task_template.yml
+    - template: thetemplates/task_template.yml@GenericTemplates
       parameters:
         environment_task: ${{parameters.environment_job}} 

@@ -48,7 +48,7 @@ Day 2:
 - 30 min: Exercise 1: (templates)
 - 15 min: Discuss exercise 1
 - 15 min: Break
-- 30 min: Exercise 2: (conditions)
+- 30 min: Exercise 2: (conditions and resources)
 - 15 min: Discuss exercise 2
 - 15 min: Wrap up, summary and Q&A
 
