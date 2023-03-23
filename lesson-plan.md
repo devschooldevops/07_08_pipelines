@@ -41,15 +41,15 @@ Day 1:
 - 25 min: Wrap up, summary and Q&A
 
 Day 2:
-- 10 min: introduction and reminder for last day
-- 40 min: Templating / nested templating, conditionals and resources
 - 10 min: Break
-- 15 min: Exercise 1: (templates)
-- 15 min: Exercise 2: (simple conditions 1 - variables)
-- 15 min: Exercise 3: (simple conditions 2 - parameters)
+- 10 min: Introduction and reminder for last day
+- 30 min: Templating / nested templating, conditionals and resources
+- 10 min: Break
+- 30 min: Exercise 1: (templates)
+- 15 min: Discuss exercise 1
 - 15 min: Break
-- 15 min: Exercise 4: (conditions complex)
-- 30 min: Exercise 5: (full pipeline exercise)
+- 30 min: Exercise 2: (conditions)
+- 15 min: Discuss exercise 2
 - 15 min: Wrap up, summary and Q&A
 
 ## Feedback from students
