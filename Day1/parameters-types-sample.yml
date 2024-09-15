@@ -1,0 +1,15 @@
+parameters:
+- name: myString  # Define a parameter named 'myString'
+  type: string  # The parameter type is string
+  default: a string  # Default value is 'a string'
+
+- name: myMultiString  # Define a parameter named 'myMultiString'
+  type: string  # The parameter type is string
+  default: default  # Default value is 'default'
+  values:  # Allowed values for 'myMultiString'
+  - default  
+  - ubuntu  
+
+- name: myBoolean  # Define a parameter named 'myBoolean'
+  type: boolean  # The parameter type is boolean
+  default: true  # Default value is true

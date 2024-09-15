@@ -1,0 +1,18 @@
+parameters: #pass values to a pipeline
+
+variables: #assign a value and use it in different part of the pipeline
+
+trigger: #Use triggers to run a pipeline automatically
+
+pool: #To build your code or deploy your software using Azure Pipelines, you need at least one agent, which belongs to a pool.
+
+resources: #A resource is anything used by a pipeline that lives outside the pipeline. Ex: another pipeline, repository or variable groups.
+
+stages: #logical boundary in the pipeline to separate environments and contains one or more jobs
+- stage:
+  jobs: #if a stage contains more than one job, jobs keyword must be used
+  - job: # a job is a series of steps that run sequentially as a unit
+    steps: #block containing the tasks to be executedA step can either be a script or a task
+    #next we can have a script or a task, smallest building block of a pipeline
+    - script:
+    - task: 

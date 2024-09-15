@@ -1,0 +1,18 @@
+parameters: #Parameters must contain a name,data type and default value and must be at the beginning of a YAML
+- name: image
+  displayName: Pool Image
+  type: string
+  default: ubuntu-latest
+  values:
+  - windows-latest
+  - ubuntu-latest
+
+trigger: none
+
+jobs:
+- job: build
+  displayName: build
+  pool: 
+    vmImage: ${{ parameters.image }} # Parameters are expanded just before the pipeline runs with syntax ${{ }}
+  steps:
+  - script: echo building $(Build.BuildNumber) with ${{ parameters.image }}
