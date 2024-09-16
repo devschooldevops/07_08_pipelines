@@ -19,7 +19,7 @@
     On which agent it ran?
     Can you explain the checkout step? Why is it needed?
 
-8. Let's add a parameter for the image pool that will contain 2 values: windows-latest and ubuntu-latest.
+8. Let's add a parameter for the image pool that will contain 2 values: `windows-latest` and `ubuntu-latest`.
    - Go to **Repos - Files** and you should see your pipeline file - **azure-pipelines.yml**
    - Edit **azure-pipelines.yml** and add the code required for the vmimage parameter. You can name it however you want.
    - Leave **commit changes directly to main branch** and hit commit.
@@ -35,7 +35,7 @@
     What was the value of variable *devschool* in all the tasks? Did it changed? 
 
 11. Explore some system variables, remember their utility?
-    * add new script task which will output following system variables values $(System.DefaultWorkingDirectory) , $(Pipeline.Workspace), $(Build.ArtifactStagingDirectory) 
+    * add new **script task** which will output following system variables values `$(System.DefaultWorkingDirectory) , $(Pipeline.Workspace), $(Build.ArtifactStagingDirectory)` 
     * as a bonus, inside same script block add the command to see folders content:
     `ls -R $(System.DefaultWorkingDirectory) $(Pipeline.Workspace) $(Build.ArtifactStagingDirectory) `
 
@@ -52,3 +52,5 @@
     - Add task and validate and save
     - Pipeline should trigger automatically
     - Artifact should be visible by selecting the last pipeline run.
+    - Check artifact content
+
