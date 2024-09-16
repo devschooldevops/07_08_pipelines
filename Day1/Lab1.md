@@ -1,4 +1,4 @@
-**Starter - pipeline lab**
+# Lab1 - Starter - pipeline
 
 1. Sign in to your Azure DevOps organization (https://dev.azure.com/[organization]) and go to your project.
 2. Go to Pipelines, and then select **New pipeline** or Create pipeline if creating your first pipeline.
