@@ -6,6 +6,7 @@
     - Import a repository -> Import
     - Clone URL: https://github.com/devschooldevops/07_08_pipelines.git
     - Import
+    - Switch to branch 2024 to see Lab files. (Branches - 2024)
 3. Go to Pipelines, and then select **Create pipeline** if creating your first pipeline.
 4. Choose **Azure Repos Git** for the source of your code
 5. Select your repository
