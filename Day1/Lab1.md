@@ -1,10 +1,11 @@
 # Lab1 - Starter - pipeline
 
 1. Sign in to your Azure DevOps organization (https://dev.azure.com/[organization]) and go to your project.
-2. First add first file to your empty repo:
+2. Import repository https://github.com/devschooldevops/07_08_pipelines.git
     - Go to Repos - Files
-    - Last option *Initialize main branch with a README or gitignore*
-    - Click `Initialize`
+    - Import a repository -> Import
+    - Clone URL: https://github.com/devschooldevops/07_08_pipelines.git
+    - Import
 3. Go to Pipelines, and then select **Create pipeline** if creating your first pipeline.
 4. Choose **Azure Repos Git** for the source of your code
 5. Select your repository
