@@ -17,7 +17,7 @@
 > :memo: Remember, we need to run at least one agent available to run our pipeline and in our case it will be the one created by us, this is the only option as Microsoft ones are not provided yet.
 
 9. Hit save and run on the right-side and leave the selected option to *commit directly to master branch*.
-   If you see permit request for the pipeline to access the pool
+   If you see permit request for the pipeline to access the pool please grant it.
 10. Check pipeline run results by selecting the pipeline.
 
     *Questions:* 
@@ -25,14 +25,14 @@
     On which agent it ran?
     Can you explain the checkout step? Why is it needed?
 
-11. Let's add a parameter for the image pool that will contain 2 values: `windows-latest` and `ubuntu-latest`.
+<!-- 11. Let's add a parameter for the image pool that will contain 2 values: `windows-latest` and `ubuntu-latest`.
    - Go to **Repos - Files** and you should see your pipeline file - **azure-pipelines.yml**
    - Edit **azure-pipelines.yml** and add the code required for the vmimage parameter. You can name it however you want.
    - Leave **commit changes directly to main branch** and hit commit.
-   (*commit* or *branch* are git actions and don't worry if you are not familiar with them yet)
-12. Run again the pipeline. We should see the vmimage parameter selection.
+   (*commit* or *branch* are git actions and don't worry if you are not familiar with them yet) -->
+<!-- 12. Run again the pipeline. We should see the vmimage parameter selection.
 
-    *Question:* What happend with the pipeline after commit message was completed?
+    *Question:* What happend with the pipeline after commit message was completed? -->
 
 13. Next, **remove** all the lines starting with *steps* block from **azure-pipelines.yml** file and replace it with all the content from **variables-sample.yml**.
 
