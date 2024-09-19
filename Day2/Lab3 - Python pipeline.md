@@ -38,4 +38,4 @@
 
 How application in browser should look like:
 
-![application](application.png)
+![application](./images/application.png)
