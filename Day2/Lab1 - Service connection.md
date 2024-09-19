@@ -5,10 +5,10 @@
 
 1. Create first a Resource group
     * Login to https://portal.azure.com
-    * ![Portal menu](/images/image-1.png)
+    * ![Portal menu](./images/image-1.png)
     * Go to Resource Groups - Create
 
-    ![Resource groups blade](/images/image.png)
+    ![Resource groups blade](./images/image.png)
 
     * Choose a name like  `webapp-studentname-rg` and region `West Europe`
     * Review + Create
