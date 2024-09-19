@@ -25,14 +25,14 @@
     On which agent it ran?
     Can you explain the checkout step? Why is it needed?
 
-<!-- 11. Let's add a parameter for the image pool that will contain 2 values: `windows-latest` and `ubuntu-latest`.
+11. Let's add a parameter for the image pool that will contain 2 values: `windows-latest` and `ubuntu-latest`.
    - Go to **Repos - Files** and you should see your pipeline file - **azure-pipelines.yml**
    - Edit **azure-pipelines.yml** and add the code required for the vmimage parameter. You can name it however you want.
    - Leave **commit changes directly to main branch** and hit commit.
    (*commit* or *branch* are git actions and don't worry if you are not familiar with them yet) -->
-<!-- 12. Run again the pipeline. We should see the vmimage parameter selection.
+12. Run again the pipeline. We should see the vmimage parameter selection.
 
-    *Question:* What happend with the pipeline after commit message was completed? -->
+    *Question:* What happend with the pipeline after commit message was completed?
 
 13. Next, **remove** all the lines starting with *steps* block from **azure-pipelines.yml** file and replace it with all the content from **variables-sample.yml**.
 
