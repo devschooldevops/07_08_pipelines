@@ -29,7 +29,7 @@
 10. And for Inline script paste entire script below
 8. Script:
 
-          webappsuffix=$(webappsuffix)
+        webappsuffix=$(webappsuffix)
 
          az appservice plan create \
            --name $(plan)\
