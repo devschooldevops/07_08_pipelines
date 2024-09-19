@@ -42,7 +42,7 @@
 
     * Following will be discussed in the class:
 
-    :tip: What will happen behind the scene is an Application registration in Microsoft Entra ID for the service connection.
+    :memo: What will happen behind the scene is an Application registration in Microsoft Entra ID for the service connection.
 
-    :bulb: Additional actions if you are not the owner of subcription. For the registered application must be granted contributor rights on the subscription.
+    :warning: Additional actions if you are not the owner of subcription. For the registered application must be granted contributor rights on the subscription.
 
