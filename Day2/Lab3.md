@@ -12,7 +12,7 @@
     * import it by going to Repos - look to the top of your page, you should have your current repo selected
     * Click on arrow to expand the options and choose import repository
 
-![import-repo](./images/import.png)
+    ![import-repo](./images/import.png)
 
 4. Upload downloaded file `python-pipeline.yml` to `msdocs-python-flask-webapp-quickstart` repository by following these steps:
     * go to Files then right tree dots menu
