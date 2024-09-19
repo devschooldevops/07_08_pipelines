@@ -13,6 +13,7 @@
     * Click on arrow to expand the options and choose import repository
 
     ![import-repo](./images/import.png)
+    * Clone URL: https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
 
 4. Upload downloaded file `python-pipeline.yml` to `msdocs-python-flask-webapp-quickstart` repository by following these steps:
     * go to Files then right tree dots menu
@@ -27,7 +28,7 @@
 
     ![pipeline](./images/pipeline.png)
 
-    * Select the path of the file `python-pipeline.yml` and click Continue
+    * Select the path of the file `python-pipeline.yml` and click **Continue**
     * here we must add the 2 missing tasks we discussed in Day 1. Remember them? If not pls ask for help.
 
     :bulb: Use the task assistant to search for and load tasks in the pipeline, in this way we are sure no property is missed.
