@@ -40,3 +40,9 @@
 
     * After the new service connection is created, copy the name as this will be the value for `azureSubscription` parameter we will use in next lab.
 
+    * Following will be discussed in the class:
+
+    :tip: What will happen behind the scene is an Application registration in Microsoft Entra ID for the service connection.
+
+    :bulb: Additional actions if you are not the owner of subcription. For the registered application must be granted contributor rights on the subscription.
+
