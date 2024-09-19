@@ -41,7 +41,9 @@
         --resource-group $(resourcegroup) \
         --plan $(plan)\
         --runtime "python|3.11"`
-9. Check test webapp instance creation on Azure.
+9. Check test webapp instance creation on Azure:
+    * go to Resource Groups icon near to top of the page.
+    * select the resource group
 10. Let's create also the production instance:
     * Go to Repo Files and edit `azure-pipelines.yml`
     * update variable environment to have the value `production`

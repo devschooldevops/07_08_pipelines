@@ -44,7 +44,7 @@ stages:
         replaceExistingArchive: true
 
 - stage: Deploy
-  displayName: 'Deploy Test Web App'
+  displayName: 'Deploy Web App'
   dependsOn: Build
   condition: succeeded()
   jobs:
