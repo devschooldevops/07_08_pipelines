@@ -1,4 +1,4 @@
-# Create a service connection
+# Create Azure RM service connection
 
 ## Create a service connection with workload identity federation (automatic) ##
 :memo: With this recommended selection, Azure DevOps automatically queries for the subscription and resource group for which we will use the connection.
@@ -27,14 +27,14 @@
     
     * Leave scope type to be **Subscription**
 
-:memo: The Azure Subscriptions you own or you are contributor should appear automatically.
+    :memo: The Azure Subscriptions you own or you are contributor should appear automatically.
 
     * Select the resource group we created at step 1.
 
 
     * Select Grant access permission to all pipelines to allow all pipelines to use this service connection. 
 
- :memo: If you don't select this option, you must manually grant access to each pipeline that uses this service connection.
+    :memo: If you don't select this option, you must manually grant access to each pipeline that uses this service connection.
 
     * Select Save.
 
