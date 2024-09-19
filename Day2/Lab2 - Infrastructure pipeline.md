@@ -14,12 +14,16 @@
     * `webappsuffix:` this values will be used to have unique webapp name, you can put your name or the suffix from devschool account. ex devschool_lotus will be **lotus**
     * `resourcegroup: ` the resource group name we created in previous lab
     * `plan: ` the name of the App service plan, can be same as resource group name + `-asp`
-    * `environment`: 'test' - this should be the first value
+    * `environment: test` - this should be the first value
 5. Delete everyting under `steps:` block
 6. Click on show assistant button to load the list of tasks
+
  ![assistant](./images/assistant.png)
+
 7. Search Az Cli and choose Azure Cli task
+
 ![azcli](./images/azcli.png)
+
 8. The Azure connection should be loaded automatically
 9. For Script choose inline script
 10. And for Inline script paste entire script below
