@@ -29,7 +29,7 @@
 10. And for Inline script paste entire script below
 8. Script:
 
-`        webappsuffix=$(webappsuffix)
+          webappsuffix=$(webappsuffix)
 
          az appservice plan create \
            --name $(plan)\
@@ -41,7 +41,7 @@
         --name $(webappname)-$(environment)-$webappsuffix \
         --resource-group $(resourcegroup) \
         --plan $(plan)\
-        --runtime "python|3.11"`
+        --runtime "python|3.11"
 9. Check test webapp instance creation on Azure:
     * go to Resource Groups icon near to top of the page.
     * select the resource group
