@@ -4,7 +4,7 @@
 
 1. First create a new Azure Repository
 
-![Create repo](repo.png)
+![Create repo](./images/repo.png)
 
 2. Name it `infra-repo` and click Create 
 3. Then go to Pipelines - New Pipeline - > Select your repository
@@ -17,9 +17,9 @@
     * `environment`: 'test' - this should be the first value
 5. Delete everyting under `steps:` block
 6. Click on show assistant button to load the list of tasks
- ![assistant](assistant.png)
+ ![assistant](./images/assistant.png)
 7. Search Az Cli and choose Azure Cli task
-![azcli](azcli.png)
+![azcli](./images/azcli.png)
 8. The Azure connection should be loaded automatically
 9. For Script choose inline script
 10. And for Inline script paste entire script below
