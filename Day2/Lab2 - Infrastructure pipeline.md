@@ -28,6 +28,7 @@
 9. For Script choose inline script
 10. And for Inline script paste entire script below
 8. Script:
+
 `        webappsuffix=$(webappsuffix)
 
          az appservice plan create \
