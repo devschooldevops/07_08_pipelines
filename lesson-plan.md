@@ -18,7 +18,7 @@ At the end of the lesson, the students should:
 - know how to explore DevOps careers and learning paths
 
 ## Resources required/used
-Example:
+
 - Azure Devops Organization with parallelism grant requested to Microsoft
 - Azure Subscription 
 - Azure App Services
@@ -53,9 +53,9 @@ Example:
 ### Learning doesn't stop here. Think big about your future!
 
 :bulb: Few recommendations on DevOps career paths.
-https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
-https://learn.microsoft.com/en-us/training/career-paths/devops-engineer
-https://learn.microsoft.com/en-us/training/paths/build-applications-with-azure-devops/
+* https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+* https://learn.microsoft.com/en-us/training/career-paths/devops-engineer
+* https://learn.microsoft.com/en-us/training/paths/build-applications-with-azure-devops/
 
 ## Feedback from students
 (generic survey will be setup)
