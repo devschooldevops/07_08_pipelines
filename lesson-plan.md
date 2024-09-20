@@ -29,13 +29,33 @@ Example:
 - Basic Git commands knowledge
 
 ## Agenda
-The agenda must contain:
-- presentation of the technology in the industry (pros and cons)
-- introduction to the technology
-- lesson core (ideally as much practical exercises as possible) **up to the trainer**
-- re-cap of the most important conceps
-- Menti/Kahoot evaluation
-- homework
+### Day 1
+
+* Presentation
+* Understanding pipelines and their purpose
+* Azure Pipelines key basics and structure
+* Labs:
+  * Azure starter pipeline
+  * Multistage pipeline insight
+* Q&A
+
+### Day 2
+
+* Templates and conditions
+* Approvals and checks
+* Labs:
+  * Azure RM service connection
+  * Infrastructure pipeline
+  * Python pipeline for deploying an Azure Web App 
+* Menti evaluation
+* Q&A
+
+### Learning doesn't stop here. Think big about your future!
+
+:bulb: Few recommendations on DevOps career paths.
+https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification
+https://learn.microsoft.com/en-us/training/career-paths/devops-engineer
+https://learn.microsoft.com/en-us/training/paths/build-applications-with-azure-devops/
 
 ## Feedback from students
 (generic survey will be setup)
